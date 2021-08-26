@@ -3,16 +3,16 @@
 # Group Day-Time
 
 ## Members
-* s3662044
-* s3667115
-* s3785546
-* s3656436
+* xxxxx
+* xxxxx
+* xxxxx
+* xxxxx
 
 ## Records
 
-* Github repository :https://github.com/DichenHu/major-assignment
-* jira Board : https://ahwm.atlassian.net/jira/software/projects/ROO/
-* Google Docs : https://drive.google.com/drive/folders/1dNJyPFDSK2lpJ1XN-IUrqnpaW5lf_W6l?usp=sharing
+* Github repository :https://github.com/xxx
+* jira Board : https://xxxx
+* Google Docs : https://drive.google.com/xxxx
 
 	
 ## Code documentation - Release 0.1.0 - date
