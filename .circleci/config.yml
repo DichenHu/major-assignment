@@ -20,7 +20,7 @@ jobs:
           path: ~/major-assignment
       - run: chmod +x ./mvnw
       - run: ./mvnw package
-      - run: java -jar target/ms_login.jar     
+      - run: java -jar target/loginmicroservices-0.0.1.jar     
 workflows:
   version: 2
   build_and_test:
