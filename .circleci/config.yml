@@ -5,7 +5,8 @@ jobs:
     docker:
       - image: circleci/node:12.18.1
     steps:
-      - checkout:
-          path: ~/FrontEnd/myfirstapp
+      - checkout
+      - run: ls
       - run: npm install --save
       - run: npm start
+      
