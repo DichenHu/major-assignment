@@ -1,11 +1,12 @@
 version: 2.1
 jobs:
   build:
-    working_directory: ~/FrontEnd/myfirstapp
+    working_directory: ~/major-assignment/FrontEnd/myfirstapp
     docker:
       - image: circleci/node:12.18.1
     steps:
-      - checkout
+      - checkout:
+          path: ~/major-assignment
       - run: ls
       - run: pwd
       - run: npm install --save
