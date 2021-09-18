@@ -18,7 +18,9 @@ jobs:
     steps:
       - checkout:
           path: ~/major-assignment
-      - run: ./mvnw package && java -jar target/ms_[microservice]-0.0.1-SNAPSHOT.jar     
+      - run: chmod +x ./mvnw
+      - run: ./mvnw package
+      - run: java -jar target/ms_[microservice]-0.0.1-SNAPSHOT.jar     
 workflows:
   version: 2
   build_and_test:
