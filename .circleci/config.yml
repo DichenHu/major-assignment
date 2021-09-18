@@ -1,0 +1,9 @@
+version: 2.1
+jobs:
+  build:
+    docker:
+      - image: circleci/node:12.18.1
+    steps:
+      - checkout
+      - run: npm install --save
+      - run: npm start
