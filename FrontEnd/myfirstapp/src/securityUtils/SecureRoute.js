@@ -21,7 +21,7 @@ SecuredRoute.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  security: state.security  
+  security: state.security
 });
 
 export default connect(mapStateToProps)(SecuredRoute);

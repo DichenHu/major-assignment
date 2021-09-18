@@ -11,11 +11,6 @@ import store from "./store";
 import Landing from "./components/Layout/Landing";
 import Register from "./components/UserManagement/Register";
 import Login from "./components/UserManagement/Login";
-import SoldBook from "./components/Book/SoldBook";
-import { SideBar } from "./components/Layout/Sidebar";
-import BookDetail from "./components/Book/BookDetail";
-import PaymentPage from './components/Payment/PaymentPage'
-import Paypage from "./components/paypal/Paypage";
 
 import jwt_decode from "jwt-decode";
 import setJWTToken from "./securityUtils/setJWTToken";
@@ -41,62 +36,30 @@ if (jwtToken) {
 }
 
 class App extends Component {
-    render() {
-        return (
-            <Provider store={store}>
-                <Router>
-                    <div className="App">
-                        <Header />
+  render() {
+    return (
+      <Provider store={store}>
+        <Router>
+          <div className="App">
+            <Header />
+            {
+              //Public Routes
+            }
+           
+            <Route exact path="/" component={Landing} />
+            <Route exact path="/register" component={Register} />
+            <Route exact path="/login" component={Login} />
 
-                        <div className="container">
-                            <div class="row">
-
-                                <div className="col-12">
-                                    {
-                                        //Public Routes
-                                    }
-
-                                    <Route exact path="/" component={Landing} />
-                                    <Route
-                                        exact
-                                        path="/register"
-                                        component={Register}
-                                    />
-                                    <Route
-                                        exact
-                                        path="/login"
-                                        component={Login}
-                                    />
-
-                                    {
-                                        //Private Routes
-                                    }
-                                    <Route
-                                        exact
-                                        path="/dashboard"
-                                        component={Dashboard}
-                                    />
-                                    <Route
-                                        exact
-                                        path="/addPerson"
-                                        component={AddPerson}
-                                    />
-                                    <Route
-                                        exact
-                                        path="/account/soldbook"
-                                        component={SoldBook}
-                                    />
-                                    <Route exact path="/book/:id" component={BookDetail}/>
-                                    <Route exact path="/paypal" component={Paypage}/>
-
-                                    <Route exact path="/payment/:method" component={PaymentPage}/>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </Router>
-            </Provider>
-        );
-    }
+            {
+              //Private Routes
+            }
+            <Route exact path="/dashboard" component={Dashboard} />
+            <Route exact path="/addPerson" component={AddPerson} />
+          
+          </div>
+        </Router>
+      </Provider>
+    );
+  }
 }
 export default App;
