@@ -17,6 +17,11 @@ import setJWTToken from "./securityUtils/setJWTToken";
 import { SET_CURRENT_USER } from "./actions/types";
 import { logout } from "./actions/securityActions";
 import SecuredRoute from "./securityUtils/SecureRoute";
+import SoldBook from "./components/Book/SoldBook";
+import { SideBar } from "./components/Layout/Sidebar";
+import BookDetail from "./components/Book/BookDetail";
+import PaymentPage from './components/Payment/PaymentPage'
+import Paypage from "./components/paypal/Paypage";
 
 const jwtToken = localStorage.jwtToken;
 
@@ -55,6 +60,11 @@ class App extends Component {
             }
             <Route exact path="/dashboard" component={Dashboard} />
             <Route exact path="/addPerson" component={AddPerson} />
+
+            <Route exact path="/account/soldbook"component={SoldBook}/>
+            <Route exact path="/book/:id" component={BookDetail}/>
+            <Route exact path="/paypal" component={Paypage}/>
+            <Route exact path="/payment/:method" component={PaymentPage}/>
           
           </div>
         </Router>
