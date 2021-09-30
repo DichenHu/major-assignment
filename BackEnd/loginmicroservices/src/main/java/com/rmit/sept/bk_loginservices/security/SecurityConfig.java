@@ -1,5 +1,7 @@
 package com.rmit.sept.bk_loginservices.security;
 
+import com.rmit.sept.bk_loginservices.services.CustomAdminDetailsService;
+import com.rmit.sept.bk_loginservices.services.CustomPublisherDetailsService;
 import com.rmit.sept.bk_loginservices.services.CustomUserDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -31,11 +33,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     private CustomUserDetailsService customUserDetailsService;
 
     @Autowired
+    private CustomPublisherDetailsService customPublisherDetailsService;
+
+    @Autowired
+    private CustomAdminDetailsService customAdminDetailsService;
+
+    @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
     @Override
     protected void configure(AuthenticationManagerBuilder authenticationManagerBuilder) throws Exception {
         authenticationManagerBuilder.userDetailsService(customUserDetailsService).passwordEncoder(bCryptPasswordEncoder);
+        authenticationManagerBuilder.userDetailsService(customPublisherDetailsService).passwordEncoder(bCryptPasswordEncoder);
+        authenticationManagerBuilder.userDetailsService(customAdminDetailsService).passwordEncoder(bCryptPasswordEncoder);
     }
 
     @Override

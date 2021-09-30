@@ -1,32 +1,32 @@
 package com.rmit.sept.bk_loginservices.services;
-import com.rmit.sept.bk_loginservices.Repositories.UserRepository;
+import com.rmit.sept.bk_loginservices.Repositories.PublisherRepository;
 import com.rmit.sept.bk_loginservices.exceptions.UsernameAlreadyExistsException;
-import com.rmit.sept.bk_loginservices.model.User;
+import com.rmit.sept.bk_loginservices.model.Publisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Service
-public class UserService {
+public class PublisherService {
 
     @Autowired
-    private UserRepository userRepository;
+    private PublisherRepository publisherRepository;
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    public User saveUser (User newUser){
+    public Publisher saveUser (Publisher newPublisher){
         try{
-            newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
+            newPublisher.setPassword(bCryptPasswordEncoder.encode(newPublisher.getPassword()));
             //Username has to be unique (exception)
-            newUser.setUsername(newUser.getUsername());
+            newPublisher.setUsername(newPublisher.getUsername());
             // Make sure that password and confirmPassword match
             // We don't persist or show the confirmPassword
-            newUser.setConfirmPassword("");
-            return userRepository.save(newUser);
+            newPublisher.setConfirmPassword("");
+            return publisherRepository.save(newPublisher);
 
         }catch (Exception e){
-            throw new UsernameAlreadyExistsException("Username '"+newUser.getUsername()+"' already exists");
+            throw new UsernameAlreadyExistsException("Username '"+newPublisher.getUsername()+"' already exists");
         }
 
     }

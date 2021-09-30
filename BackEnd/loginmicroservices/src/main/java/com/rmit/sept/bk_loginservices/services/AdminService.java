@@ -1,32 +1,32 @@
 package com.rmit.sept.bk_loginservices.services;
-import com.rmit.sept.bk_loginservices.Repositories.UserRepository;
+import com.rmit.sept.bk_loginservices.Repositories.AdminRepository;
 import com.rmit.sept.bk_loginservices.exceptions.UsernameAlreadyExistsException;
-import com.rmit.sept.bk_loginservices.model.User;
+import com.rmit.sept.bk_loginservices.model.Admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @Service
-public class UserService {
+public class AdminService {
 
     @Autowired
-    private UserRepository userRepository;
+    private AdminRepository adminRepository;
 
     @Autowired
     private BCryptPasswordEncoder bCryptPasswordEncoder;
 
-    public User saveUser (User newUser){
+    public Admin saveUser (Admin newAdmin){
         try{
-            newUser.setPassword(bCryptPasswordEncoder.encode(newUser.getPassword()));
+            newAdmin.setPassword(bCryptPasswordEncoder.encode(newAdmin.getPassword()));
             //Username has to be unique (exception)
-            newUser.setUsername(newUser.getUsername());
+            newAdmin.setUsername(newAdmin.getUsername());
             // Make sure that password and confirmPassword match
             // We don't persist or show the confirmPassword
-            newUser.setConfirmPassword("");
-            return userRepository.save(newUser);
+            newAdmin.setConfirmPassword("");
+            return adminRepository.save(newAdmin);
 
         }catch (Exception e){
-            throw new UsernameAlreadyExistsException("Username '"+newUser.getUsername()+"' already exists");
+            throw new UsernameAlreadyExistsException("Username '"+newAdmin.getUsername()+"' already exists");
         }
 
     }

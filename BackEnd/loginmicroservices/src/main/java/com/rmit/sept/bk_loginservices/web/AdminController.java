@@ -1,11 +1,11 @@
 package com.rmit.sept.bk_loginservices.web;
-import com.rmit.sept.bk_loginservices.model.User;
+import com.rmit.sept.bk_loginservices.model.Admin;
 import com.rmit.sept.bk_loginservices.payload.JWTLoginSucessReponse;
 import com.rmit.sept.bk_loginservices.payload.LoginRequest;
 import com.rmit.sept.bk_loginservices.security.JwtTokenProvider;
+import com.rmit.sept.bk_loginservices.services.AdminService;
 import com.rmit.sept.bk_loginservices.services.MapValidationErrorService;
-import com.rmit.sept.bk_loginservices.services.UserService;
-import com.rmit.sept.bk_loginservices.validator.UserValidator;
+import com.rmit.sept.bk_loginservices.validator.AdminValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,30 +23,30 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import static com.rmit.sept.bk_loginservices.security.SecurityConstant.TOKEN_PREFIX;
 
 @RestController
-@CrossOrigin()
-@RequestMapping("/api/users")
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/api/admins")
 
-public class UserController {
+public class AdminController {
 
     @Autowired
     private MapValidationErrorService mapValidationErrorService;
 
     @Autowired
-    private UserService userService;
+    private AdminService adminService;
 
     @Autowired
-    private UserValidator userValidator;
+    private AdminValidator adminValidator;
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@Valid @RequestBody User user, BindingResult result) {
+    public ResponseEntity<?> registerUser(@Valid @RequestBody Admin user, BindingResult result) {
         // Validate passwords match
-        userValidator.validate(user,result);
+        adminValidator.validate(user,result);
 
         ResponseEntity<?> errorMap = mapValidationErrorService.MapValidationService(result);
         if(errorMap != null)return errorMap;
 
-        User newUser = userService.saveUser(user);
+        Admin newUser = adminService.saveUser(user);
 
-        return  new ResponseEntity<User>(newUser, HttpStatus.CREATED);
+        return  new ResponseEntity<Admin>(newUser, HttpStatus.CREATED);
     }
 
 

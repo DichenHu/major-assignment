@@ -1,11 +1,11 @@
 package com.rmit.sept.bk_loginservices.web;
-import com.rmit.sept.bk_loginservices.model.User;
+import com.rmit.sept.bk_loginservices.model.Publisher;
 import com.rmit.sept.bk_loginservices.payload.JWTLoginSucessReponse;
 import com.rmit.sept.bk_loginservices.payload.LoginRequest;
 import com.rmit.sept.bk_loginservices.security.JwtTokenProvider;
 import com.rmit.sept.bk_loginservices.services.MapValidationErrorService;
-import com.rmit.sept.bk_loginservices.services.UserService;
-import com.rmit.sept.bk_loginservices.validator.UserValidator;
+import com.rmit.sept.bk_loginservices.services.PublisherService;
+import com.rmit.sept.bk_loginservices.validator.PublisherValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -24,29 +24,29 @@ import static com.rmit.sept.bk_loginservices.security.SecurityConstant.TOKEN_PRE
 
 @RestController
 @CrossOrigin()
-@RequestMapping("/api/users")
+@RequestMapping("/api/publishers")
 
-public class UserController {
+public class PublisherController {
 
     @Autowired
     private MapValidationErrorService mapValidationErrorService;
 
     @Autowired
-    private UserService userService;
+    private PublisherService publisherService;
 
     @Autowired
-    private UserValidator userValidator;
+    private PublisherValidator publisherValidator;
     @PostMapping("/register")
-    public ResponseEntity<?> registerUser(@Valid @RequestBody User user, BindingResult result) {
+    public ResponseEntity<?> registerUser(@Valid @RequestBody Publisher user, BindingResult result) {
         // Validate passwords match
-        userValidator.validate(user,result);
+        publisherValidator.validate(user,result);
 
         ResponseEntity<?> errorMap = mapValidationErrorService.MapValidationService(result);
         if(errorMap != null)return errorMap;
 
-        User newUser = userService.saveUser(user);
+        Publisher newUser = publisherService.saveUser(user);
 
-        return  new ResponseEntity<User>(newUser, HttpStatus.CREATED);
+        return  new ResponseEntity<Publisher>(newUser, HttpStatus.CREATED);
     }
 
 
