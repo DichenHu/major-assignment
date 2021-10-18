@@ -36,6 +36,7 @@ public class UserController {
 
     @Autowired
     private UserValidator userValidator;
+    
     @PostMapping("/register")
     public ResponseEntity<?> registerUser(@Valid @RequestBody User user, BindingResult result) {
         // Validate passwords match

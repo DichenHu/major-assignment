@@ -1,19 +1,35 @@
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\security\JwtTokenProvider.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\services\UserService.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\ms_login.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\web\UserController.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\payload\JWTLoginSucessReponse.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\validator\UserValidator.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\model\User.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\exceptions\InvalidLoginResponse.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\exceptions\UsernameAlreadyExistsException.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\security\JwtAuthenticationEntryPoint.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\security\SecurityConfig.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\exceptions\UsernameAlreadyExistsResponse.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\services\CustomUserDetailsService.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\security\SecurityConstant.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\payload\LoginRequest.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\security\JwtAuthenticationFilter.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\Repositories\UserRepository.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\exceptions\CustomResponseEntityExceptionHandler.java
-D:\University\2021\SEPT\major-assignment\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\services\MapValidationErrorService.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\services\UserService.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\Repositories\PublisherRepository.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\model\Admin.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\security\SecurityConfig.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\security\JwtTokenProvider.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\exceptions\CustomResponseEntityExceptionHandler.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\exceptions\UsernameAlreadyExistsException.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\security\JwtAuthenticationEntryPoint.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\services\CustomAdminDetailsService.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\Repositories\UserRepository.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\payload\LoginRequest.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\model\Book.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\services\AdminService.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\services\CustomUserDetailsService.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\validator\UserValidator.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\web\AdminController.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\web\PublisherController.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\payload\JWTLoginSucessReponse.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\exceptions\UsernameAlreadyExistsResponse.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\Repositories\AdminRepository.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\security\SecurityConstant.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\web\UserController.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\services\CustomPublisherDetailsService.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\services\MapValidationErrorService.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\model\User.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\Repositories\BookRepository.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\security\JwtAuthenticationFilter.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\validator\PublisherValidator.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\validator\AdminValidator.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\ms_login.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\services\PublisherService.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\model\Publisher.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\services\BookService.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\exceptions\InvalidLoginResponse.java
+D:\University\2021\SEPT\Milestone 3 v2\major-assignment\BackEnd\loginmicroservices\src\main\java\com\rmit\sept\bk_loginservices\web\BookController.java

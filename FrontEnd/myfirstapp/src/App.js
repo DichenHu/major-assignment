@@ -22,7 +22,8 @@ import { SideBar } from "./components/Layout/Sidebar";
 import BookDetail from "./components/Book/BookDetail";
 import PaymentPage from './components/Payment/PaymentPage'
 import Paypage from "./components/paypal/Paypage";
-
+import AddBook from "./components/Book/AddBook";
+import BookList from "./components/Book/BookList";
 const jwtToken = localStorage.jwtToken;
 
 if (jwtToken) {
@@ -65,7 +66,8 @@ class App extends Component {
             <Route exact path="/book/:id" component={BookDetail}/>
             <Route exact path="/paypal" component={Paypage}/>
             <Route exact path="/payment/:method" component={PaymentPage}/>
-          
+            <Route exact path="/addBook" component={AddBook}/>         
+            <Route exact path="/bookList" component={BookList}/>    
           </div>
         </Router>
       </Provider>
