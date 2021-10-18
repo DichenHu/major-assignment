@@ -1,21 +1,18 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import CollapseSideBar from "../Layout/CollapseSideBar";
-import MastercardPage from "./MasterCardPage";
-import { PaymentSideBar } from "./PaymentSidebar";
-import PaypalPage from "./PaypalPage";
+import AdmSideBar from "../Layout/AdmSideBar";
 
-const PaymentPage = () => {
+
+const Aprove = () => {
     let { method } = useParams();
 
     function renderView() {
         switch (method) {
             case "paypal":
-                return <PaypalPage />;
+                return true;
 
             case "mastercard":
-                return <MastercardPage />;
-                
+                return true;
             default:
                 break;
         }
@@ -25,11 +22,11 @@ const PaymentPage = () => {
         <div className="row">
             <div className="col-4">
                 {" "}
-                <CollapseSideBar />
+                <AdmSideBar />
             </div>
             <div className="col-8"> {renderView()}</div>
         </div>
     );
 };
 
-export default PaymentPage;
+export default Aprove;

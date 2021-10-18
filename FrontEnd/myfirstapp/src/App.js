@@ -16,6 +16,7 @@ import { SideBar } from "./components/Layout/Sidebar";
 import BookDetail from "./components/Book/BookDetail";
 import PaymentPage from './components/Payment/PaymentPage'
 import Paypage from "./components/paypal/Paypage";
+import Aprove from"./components/Admin/Aprove";
 
 class App extends Component {
     render() {
@@ -67,6 +68,7 @@ class App extends Component {
                                     <Route exact path="/paypal" component={Paypage}/>
 
                                     <Route exact path="/payment/:method" component={PaymentPage}/>
+                                    <Route exact path="/Admin" component={Aprove}/>
                                 </div>
                             </div>
                         </div>

@@ -34,14 +34,14 @@ function hasChildren(item) {
 const menu = [
     {
         icon: <HomeOutlinedIcon />,
-        title: "Paymentmethod",
+        title: "Orders",
         items: [
             {
-                title: "Paypal",
+                title: "Tracking orders",
                 to: "/payment/paypal",
             },
             {
-                title: "Mastercard",
+                title: "cancel Orders",
                 to: "/payment/mastercard",
             },
         ],
@@ -51,39 +51,32 @@ const menu = [
         title: "Account manage and book manage",
         items: [
             {
-                title: "order history",
+                title: "Account Manage",
                 items: [
                     {
-                        title: "Transaction history",
+                        title: "Aprove accounts",
                         to: "/thedowtheory",
                     },
                     {
-                        title: "sell books",
+                        title: "remove account",
                         to: "/chart",
                     },
-                    {
-                        title: "Sold Books",
-                        to: "/account/soldbook",
-                    },
-                    {
-                        title: "Booklist",
-                        to: "/book/:id",
-                    },
+
                 ],
             },
             {
-                title: "my account",
+                title: "Book management",
                 items: [
                     {
-                        title: "Cancel Account",
+                        title: "Book review",
                         to: "/thedowtheory",
                     },
                     {
-                        title: "Forgert password",
+                        title: "add Book",
                         to: "/chart",
                     },
                     {
-                        title: "Trend & Trend Lines",
+                        title: "delete book",
                         to: "/trendlines",
                     },
                     {
@@ -93,20 +86,11 @@ const menu = [
                 ],
             },
             {
-                title: "bookview",
+                title: "csv files",
                 items: [
                     {
-                        title: "search for the book",
+                        title: "select the file",
                         to: "/thedowtheory",
-                    },
-                    {
-                        title: "add book review",
-                        to: "/chart",
-                    },
-
-                    {
-                        title: "tracking order",
-                        to: "/sandr",
                     },
                 ],
             },

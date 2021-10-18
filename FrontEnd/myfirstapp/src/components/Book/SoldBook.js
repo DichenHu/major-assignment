@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { BookCell } from "./BookCell";
+import SearchBar from "./SearchBar";
+import BookData from "./Data.json";
+
 
 import { Link } from "react-router-dom";
 
@@ -67,6 +70,9 @@ class SoldBook extends Component {
         return (
             <div className="container">
                 <h2>Sold Book</h2>
+        <SearchBar placeholder="Enter a book Name..." data={BookData} />
+
+
                 <hr class="solid"></hr>
 
                 <div className="container" style={frameStyle}>

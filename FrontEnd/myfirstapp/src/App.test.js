@@ -9,4 +9,4 @@ import App from './App'
     
     expect(asFragment(<App />)).toMatchSnapshot()
    })
-});
+;
