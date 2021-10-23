@@ -7,27 +7,27 @@ class Person extends Component {
                             <div className="card card-body bg-light mb-3">
                                 <div className="row">
                                     <div className="col-2">
-                                        <span className="mx-auto">REACT</span>
+                                        <span className="mx-auto">Welcome to</span>
                                     </div>
                                     <div className="col-lg-6 col-md-4 col-8">
-                                        <h3>Spring / React Person</h3>
-                                        <p>Create a Person with Spring Boot and React</p>
+                                        <h3>Eclectus Book Store</h3>
+                                        <p></p>
                                     </div>
                                     <div className="col-md-4 d-none d-lg-block">
                                         <ul className="list-group">
-                                            <a href="#">
+                                            <a href="/bookList">
                                                 <li className="list-group-item board">
-                                                    <i className="fa fa-flag-checkered pr-1">Person Profile </i>
+                                                    <i className="fa fa-book pr-1">View Books </i>
                                                 </li>
                                             </a>
-                                            <a href="#">
+                                            <a href="/paypal">
                                                 <li className="list-group-item update">
-                                                    <i className="fa fa-edit pr-1">Update Person Info</i>
+                                                    <i className="fa fa-shopping-cart pr-1">View Payment Page</i>
                                                 </li>
                                             </a>
-                                            <a href="">
-                                                <li className="list-group-item delete">
-                                                    <i className="fa fa-minus-circle pr-1">Delete Person</i>
+                                            <a href="/soldBook">
+                                                <li className="list-group-item update">
+                                                    <i className="fa fa-search">View Search</i>
                                                 </li>
                                             </a>
                                         </ul>

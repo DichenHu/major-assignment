@@ -1,7 +1,10 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
-import { BookCell } from "./BookCell";
+import { BookCell } from "./BookCellOld";
+import SearchBar from "./SearchBar";
+import BookData from "./Data.json";
+
 
 import { Link } from "react-router-dom";
 
@@ -34,20 +37,20 @@ class SoldBook extends Component {
                 { id: 2, name: "Book1", price: 198, customer: "Jack" },
                 {
                     id: 3,
-                    name: "Book1",
+                    name: "Book2",
                     price: 198,
                     customer: "Jack",
                 },
                 {
                     id: 4,
-                    name: "Book1",
+                    name: "Book3",
                     price: 198,
                     customer: "Jack",
                 },
                 {
                     id: 5,
                     image: "https://images.squarespace-cdn.com/content/v1/56bf8adad51cd4587e5f14b2/1514572181808-ERMYYQNWJQXHHRC2NO1H/best-books-book-youll-ever-read.jpg",
-                    name: "Book1",
+                    name: "Book4",
                     price: 198,
                     customer: "Jack",
                 },
@@ -67,6 +70,9 @@ class SoldBook extends Component {
         return (
             <div className="container">
                 <h2>Sold Book</h2>
+        <SearchBar placeholder="Enter a book Name..." data={BookData} />
+
+
                 <hr class="solid"></hr>
 
                 <div className="container" style={frameStyle}>

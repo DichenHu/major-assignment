@@ -14,11 +14,13 @@ export const BookCell = ({ book }) => {
             <br />
 
             <br />
-            <p>{book.bookName}</p>
+            <p>{book.name}</p>
             <br />
 
-            <p>{book.bookDescription}</p>
+            <p>{book.price}</p>
             <br />
+
+            <p>{book.customer}</p>
         </div>
     );
 };
