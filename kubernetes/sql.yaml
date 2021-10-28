@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      bb: web
+  template:
+    metadata:
+      labels:
+        bb: web
+    spec:
+      containers:
+      - name: mysql
+        image: suchspooky/sept_mysql
+        env:
+        - name: MYSQL_ROOT_PASSWORD
+          value: password
+        ports:
+        - containerPort: 3306
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bb-entrypoint
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    bb: web
+  ports:
+  - port: 3306
+    targetPort: 3306
+    nodePort: 30001

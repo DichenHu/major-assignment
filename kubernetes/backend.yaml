@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      bb: web
+  template:
+    metadata:
+      labels:
+        bb: web
+    spec:
+      containers:
+      - name: backend
+        image: josiahw2551/seft
+        ports:
+        - containerPort: 80
+        - containerPort: 3306
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: bb-entrypoint
+  namespace: default
+spec:
+  type: NodePort
+  selector:
+    bb: web
+  ports:
+  - port: 8080
+    targetPort: 8080
+    nodePort: 30001
